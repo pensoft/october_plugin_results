@@ -1,0 +1,33 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: Title
+        type: text
+        searchable: true
+    month_label:
+        label: Months
+        type: text
+        searchable: true
+    phase:
+        label: Phase
+        relation: phase
+        select: name
+        searchable: false
+    position:
+        label: Side
+        type: text
+        searchable: false
+    position_x:
+        label: 'X (%)'
+        type: number
+        searchable: false
+    is_published:
+        label: Published
+        type: switch
+        searchable: false

@@ -1,0 +1,23 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created results, phases, audiences and pivot tables'
+    - create_results_tables.php
+1.0.3:
+    - 'Seed the What CONCERTO Achieved timeline (CON-86)'
+    - seed_results_data.php
+1.0.4:
+    - 'Fix ambiguous sort_order on the result/category relation'
+    - drop_pivot_sort_order.php
+1.0.5:
+    - 'Backfill the result pop-up copy for installs seeded before it was available'
+    - backfill_results_content.php
+1.0.6:
+    - 'Add per-result vertical offset so nodes can be staggered as designed'
+    - add_result_offset_y.php
+1.0.7:
+    - 'Backfill the vertical offsets from the design'
+    - backfill_result_offsets.php
+1.0.8:
+    - 'Attach the timeline icons to the seeded results'
+    - seed_result_icons.php

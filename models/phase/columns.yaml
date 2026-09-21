@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+        type: text
+        searchable: true
+    position_x:
+        label: 'X (%)'
+        type: number
+        searchable: false

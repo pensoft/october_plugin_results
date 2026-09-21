@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Audience
+
+# Model Form Field configuration
+form: $/pensoft/results/models/category/fields.yaml
+
+# Model Class name
+modelClass: Pensoft\Results\Models\Category
+
+# Default redirect location
+defaultRedirect: pensoft/results/categories
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: pensoft/results/categories/update/:id
+    redirectClose: pensoft/results/categories
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: pensoft/results/categories
+    redirectClose: pensoft/results/categories
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

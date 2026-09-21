@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        span: auto
+        required: 1
+        type: text
+    is_visible:
+        label: Visible
+        comment: 'If checked, this audience gets a toggle on the timeline.'
+        span: auto
+        type: checkbox
+        default: 1

@@ -1,0 +1,115 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Title
+        span: left
+        required: 1
+        type: text
+    month_label:
+        label: 'Month label'
+        comment: 'Shown under the title, e.g. M12 or M18-M48'
+        span: right
+        type: text
+
+tabs:
+    fields:
+        is_published:
+            tab: Timeline
+            label: Published
+            comment: 'Unpublished results are hidden from the timeline.'
+            span: left
+            type: checkbox
+            default: 1
+        phase:
+            tab: Timeline
+            label: Phase
+            comment: 'The large circle on the axis this result belongs to.'
+            span: right
+            type: relation
+            select: name
+            nameFrom: name
+            emptyOption: '- no phase -'
+        position:
+            tab: Timeline
+            label: 'Side of the timeline'
+            span: left
+            type: dropdown
+            default: above
+        # Layout coordinates taken from the approved design. Hidden rather than
+        # removed so they can be brought back by flipping one line. October
+        # strips hidden fields out of the save data, so the stored values are
+        # left alone whenever a result is edited.
+        position_x:
+            tab: Timeline
+            label: 'Horizontal position (%)'
+            comment: 'Distance from the left edge of the timeline, 0-100.'
+            span: right
+            type: number
+            step: 0.1
+            default: 50
+            hidden: true
+        offset_y:
+            tab: Timeline
+            label: 'Distance from the axis (px)'
+            comment: 'Gap between the timeline axis and this node. Vary it between neighbours so their titles do not crowd.'
+            span: left
+            type: number
+            default: 86
+            hidden: true
+        icon:
+            tab: Timeline
+            label: Icon
+            comment: 'Icon shown inside the circle. SVG or PNG on a transparent background.'
+            span: left
+            type: fileupload
+            mode: image
+            fileTypes: 'svg,png'
+            imageWidth: 60
+            imageHeight: 60
+        icon_class:
+            tab: Timeline
+            label: 'Icon CSS class'
+            comment: 'Fallback used when no icon file is uploaded, e.g. an icomoon class.'
+            span: right
+            type: text
+            hidden: true
+
+        categories:
+            tab: Audiences
+            label: 'Relevant for'
+            commentAbove: 'The audience toggles that reveal this result. A result with no audience selected only shows under "All".'
+            type: relation
+            select: name
+            nameFrom: name
+            span: full
+            pivotData:
+                table: pensoft_results_result_category
+
+        description:
+            tab: Details
+            label: Description
+            commentAbove: 'Intro paragraph shown at the top of the pop-up.'
+            type: textarea
+            size: small
+            span: full
+        relevant_for:
+            tab: Details
+            label: 'Who is it relevant for'
+            type: richeditor
+            size: small
+            span: full
+        how_used:
+            tab: Details
+            label: 'How can it be used'
+            type: richeditor
+            size: small
+            span: full
+        materials:
+            tab: Details
+            label: 'Available materials'
+            type: richeditor
+            size: small
+            span: full

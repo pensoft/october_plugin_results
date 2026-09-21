@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Phase
+
+# Model Form Field configuration
+form: $/pensoft/results/models/phase/fields.yaml
+
+# Model Class name
+modelClass: Pensoft\Results\Models\Phase
+
+# Default redirect location
+defaultRedirect: pensoft/results/phases
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: pensoft/results/phases/update/:id
+    redirectClose: pensoft/results/phases
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: pensoft/results/phases
+    redirectClose: pensoft/results/phases
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

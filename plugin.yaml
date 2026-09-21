@@ -1,0 +1,24 @@
+plugin:
+    name: 'pensoft.results::lang.plugin.name'
+    description: 'pensoft.results::lang.plugin.description'
+    author: Pensoft
+    icon: oc-icon-sitemap
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Results
+        url: pensoft/results/results
+        icon: icon-sitemap
+        sideMenu:
+            side-menu-results:
+                label: Results
+                url: pensoft/results/results
+                icon: icon-sitemap
+            side-menu-phases:
+                label: 'Timeline phases'
+                url: pensoft/results/phases
+                icon: icon-circle-o
+            side-menu-categories:
+                label: Audiences
+                url: pensoft/results/categories
+                icon: icon-users
