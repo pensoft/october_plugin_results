@@ -34,7 +34,9 @@ class SeedResultsData extends Seeder
             $result->materials = $this->materials($data['materials']);
             $result->position = $data['position'];
             $result->position_x = $data['position_x'];
-            $result->offset_y = $data['offset_y'];
+            // offset_y is deliberately not set here: this seeder runs at 1.0.3,
+            // before the column is added at 1.0.6. BackfillResultOffsets applies
+            // the values from results() once the column exists.
             $result->phase_id = $phases[$data['phase']] ?? null;
             $result->sort_order = $sort + 1;
             $result->is_published = true;
